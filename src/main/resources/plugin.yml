@@ -1,0 +1,5 @@
+name: Accolades
+version: '${project.version}'
+main: me.sjaeledyr.accolades.Accolades
+api-version: 1.18
+description: Colonizations replacement for PhatLoots plugin, grants bonus chests and rewards for achievements.
