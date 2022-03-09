@@ -1,5 +1,6 @@
 package me.sjaeledyr.accolades;
 
+import me.sjaeledyr.accolades.util.PlayerDataManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -7,9 +8,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
 
+    public PlayerDataManager data;
+
     @Override
     public void onEnable() {
         // Plugin startup logic
+        this.data = new PlayerDataManager(this);
         this.saveDefaultConfig();
         System.out.println("[Accolades] Accolades by Sjaeledyr has been loaded!");
         System.out.print("[Accolades] Plugin Version 1.0-SNAPSHOT");
@@ -41,5 +45,6 @@ public final class Main extends JavaPlugin {
                 }
             }
         }
+        return false;
     }
 }
